@@ -7,13 +7,15 @@
     "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "prepare": "husky install"
+    "asyncapi": "asyncapi"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "express": "5.0.0-beta.1"
+    "express": "5.0.0-beta.1",
+    "socket.io": "^4.6.1"
   },
   "devDependencies": {
+    "@asyncapi/cli": "^0.31.2",
     "@types/express": "^4.17.17",
     "@types/node": "^18.14.5",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
@@ -21,7 +23,6 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
-    "husky": ">=6",
     "lint-staged": ">=10",
     "nodemon": "^2.0.21",
     "prettier": "2.8.4",

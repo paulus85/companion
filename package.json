@@ -1,0 +1,19 @@
+{
+  "name": "companion",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:paulus85/companion.git",
+  "author": "Paul Rivière <contact@paulriviere.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.8.4"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}

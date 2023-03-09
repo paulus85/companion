@@ -1,0 +1,10 @@
+html,
+body {
+    min-height: 80px;
+    margin: 10px;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: row;
+}

@@ -3,13 +3,23 @@
     "name": "Companion Meet extension",
     "version": "0.1.0",
     "description": "Extension for Firefox to control Google Meet",
-    "content_scripts": [],
     "icons": {
         "48": "assets/icon-48.png"
     },
+    "background": {
+        "scripts": ["background_script.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.meet.google.com/*"],
+            "js": ["content_script.js"]
+        }
+    ],
     "browser_action": {
-        "browser_style": true,
-        "default_popup": "src/popup.html",
-        "default_icon": "assets/icon-32.png"
+        "icons": {
+            "48": "assets/icon-48.png"
+        },
+        "default_popup": "browserAction/index.html",
+        "default_title": "meet-extension"
     }
 }

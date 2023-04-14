@@ -1,10 +1,10 @@
 {
     "name": "companion-meet-extension",
     "version": "0.1.0",
-    "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "web-ext": "web-ext"
+        "web-ext": "web-ext",
+        "run": "web-ext run --verbose"
     },
     "devDependencies": {
         "web-ext": "^7.5.0"

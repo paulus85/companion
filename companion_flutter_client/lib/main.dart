@@ -1,9 +1,14 @@
+import 'package:companion_flutter_client/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(MyApp());
+  Intl.defaultLocale = 'fr_FR';
+  initializeDateFormatting('fr_FR', null).then((_) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,24 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Bonjour, Flutter sur Raspberry Pi!❤️',
-        ),
-      ),
+          primarySwatch: Colors.blue,
+          textTheme: GoogleFonts.manropeTextTheme()),
+      home: HomePage(),
     );
   }
 }
